@@ -1,9 +1,9 @@
 import React from 'react'
 
-const About = () => {
+function About() {
   return (
     <div>
-        <h1>About</h1>
+      <h1>About</h1>
       <p>Demo project showcasing the use of NodeJs, Express & MongoDB.</p>
       <p>That's pretty much it.</p>
 
@@ -55,6 +55,8 @@ const About = () => {
           </tr>
         </tbody>
       </table>
+
+
     </div>
   )
 }

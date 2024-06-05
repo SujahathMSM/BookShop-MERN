@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer>
-        &copy; CopyRight { new Date().getFullYear()}
-    </footer>
+    <footer>&copy; CopyRight { new Date().getFullYear() }</footer>
   )
 }
 

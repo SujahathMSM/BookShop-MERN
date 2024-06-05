@@ -1,12 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/react.svg";
-const Header = () => {
+
+function Header() {
   return (
     <header>
       <Link to="/" className="logo">
-        <img src={logo} alt="ReactJS" />
-        React JS
+        <img src={logo} alt="ReactJs" /> ReactJs
       </Link>
 
       <nav>
@@ -16,6 +16,6 @@ const Header = () => {
       </nav>
     </header>
   );
-};
+}
 
 export default Header;
