@@ -50,6 +50,17 @@ app.get("/books", async (req, res) => {
   }
 });
 
+// Get a single book by slug
+app.get("/books/:slug", async (req, res) => {
+  slugParam = req.params.slug;
+  try {
+    const data = await Book.findOne({slug: slugParam})
+    res.status(201).json(data);
+  } catch (error) {
+    res.status(500).json({message: error.message})
+  }
+})
+
 app.get("*", (req, res) => {
   res.sendStatus("404");
 });
