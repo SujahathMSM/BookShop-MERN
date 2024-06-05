@@ -24,14 +24,12 @@ function singleBook() {
     fetchData();
   }, []);
 
-  function StarRating({ numberOfStars} ) {
-    const stars = [];
-
-    for(let i = 0; i < numberOfStars; i++ ) {
-      stars.push(<span key={i}>⭐</span>)
+  function printStars(number){
+    var star = ""
+    for (let i = 0; i < number; i++){
+        star += "⭐"
     }
-
-    return <div>Rating: {stars}</div>
+    return star
   }
 
   return (
@@ -49,7 +47,7 @@ function singleBook() {
       <div className="col-2">
         <h1>{data?.title}</h1>
         <p>{data?.description}</p>
-        <StarRating numberOfStars={data?.stars} />
+        <p>{printStars(data.stars)}</p>
 
         <p>Category</p>
         <ul>
